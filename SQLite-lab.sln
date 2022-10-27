@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLite-lab", "SQLite-lab\SQLite-lab.csproj", "{C1B81635-10D2-49DA-8F67-C895BA6C0776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B81635-10D2-49DA-8F67-C895BA6C0776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B81635-10D2-49DA-8F67-C895BA6C0776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B81635-10D2-49DA-8F67-C895BA6C0776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B81635-10D2-49DA-8F67-C895BA6C0776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
