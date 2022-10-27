@@ -7,7 +7,8 @@ namespace SQLite_lab;
 
 public partial class BooksDataContext : DbContext
 {
-    private static ApplicationContext? _context;
+    
+    private static BooksDataContext? _context;
 
     public BooksDataContext()
     {
@@ -17,10 +18,9 @@ public partial class BooksDataContext : DbContext
         : base(options)
     {
     }
-
-    public static ApplicationContext GetContext()
+    public static BooksDataContext GetContext()
     {
-        if (_context == null) _context = new ApplicationContext();
+        if (_context == null) _context = new BooksDataContext();
         return _context;
     }
 
@@ -44,9 +44,7 @@ public partial class BooksDataContext : DbContext
         {
             entity.ToTable("auth");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
 
             entity.Property(e => e.Age).HasColumnName("age");
 
@@ -77,8 +75,6 @@ public partial class BooksDataContext : DbContext
         modelBuilder.Entity<Book>(entity =>
         {
             entity.ToTable("books");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
 
             entity.Property(e => e.CountPage).HasColumnName("count_page");
 

@@ -8,7 +8,16 @@
     <Grid>
         <TabControl>
             <TabItem Header="Авторы">
-                <DockPanel>
+                <DockPanel LastChildFill="True">
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                        <TextBlock>Имя: </TextBlock>
+                        <TextBox Margin="10,0" Name="Name" Text="{Binding NewAuthor.Name}" Width="100"></TextBox>
+                        <TextBlock>Возраст: </TextBlock>
+                        <TextBox Margin="10,0" Name="Age" Text="{Binding NewAuthor.Age}" Width="100"></TextBox>
+                        <Button Click="ButtonBase_OnClick" Content="Сохранить"></Button>
+
+                    </StackPanel>
+
                     <DataGrid Name="AuthorsGrid" />
                 </DockPanel>
 
