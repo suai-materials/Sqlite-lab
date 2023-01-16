@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold  "Data Source=C:\Users\user\Desktop\labs\04.01\SQLite-lab\SQLite-lab\res\films.db" Microsoft.EntityFrameworkCore.Sqlite -c AcmeDataContext --project .\SQLite-lab\SQLite-lab.csproj

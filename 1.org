@@ -1,0 +1,93 @@
+
+Задание 1. Изучить подход code first.
+	
+Определим в проекте класс User, объекты которого будут храниться в базе данных. Установим подключение к БД и добавим данные в БД через приложение(на момент запуска приложения БД не существует). 
+
+Код: 
+
+- Интерфейс (FirstTask.xaml):
+
+  #+INCLUDE: ./SQLite-lab/FirstTask.xaml src xml
+
+- Класс User (User.cs)
+
+  #+INCLUDE: ./SQLite-lab/User.cs src c++
+
+
+- Логика (FirstTask.xaml.cs)
+
+  #+INCLUDE: ./SQLite-lab/FirstTask.xaml.cs src c++
+
+
+Работа приложения:
+
+[[./images/1.jpg]]
+
+Задание 2. Изучить подход database first. 
+
+Создать БД из трех связанных таблиц в DB Browser for SQLite(Таблица Авторы, Книги, Книги​_Авторы). 
+Используя команду обратного проектирования, получить классы сущностей и контекстов  на основе схемы существующей базы данных.
+
+Код: 
+
+- База данных:
+
+  [[file:images/2.jpg]]
+
+- Консольная команда использованная для преобразование БД в .cs файлы:
+
+  #+INCLUDE: migration.bat src shell
+
+- Полученные файлы на основе базы данных:
+
+  - BooksDataContext.cs
+
+    #+INCLUDE: ./SQLite-lab/BooksDataContext.cs src c++
+
+  - Book.cs
+   
+    #+INCLUDE: ./SQLite-lab/Book.cs src c++
+
+
+  - Auth.cs
+
+    #+INCLUDE: ./SQLite-lab/Auth.cs src c++
+
+  - AuthBook.cs
+
+      #+INCLUDE: ./SQLite-lab/AuthBook.cs src c++
+
+- Интерфейс (SecondTask.xaml)
+
+  #+INCLUDE: ./SQLite-lab/SecondTask.xaml src xml
+
+- Логика (AuthorsViewModel.cs)
+
+  #+INCLUDE: ./SQLite-lab/AuthorsViewModel.cs src c++
+
+- Связка (SecondTask.xaml.cs)
+
+  #+INCLUDE: ./SQLite-lab/SecondTask.xaml.cs src c++
+
+Работа приложения:
+
+- Экраны: 
+
+  [[file:images/3.jpg]]
+
+  [[file:images/4.jpg]]
+
+  [[file:images/5.jpg]]
+
+- Добавление автора:
+  
+  [[file:images/6.jpg]]
+  
+  [[file:images/7.jpg]]
+
+  [[file:images/8.jpg]]
+
+
+  
+
+

@@ -16,7 +16,6 @@ public class AuthorsViewModel
         try
         {
             dbContext.SaveChanges();
-
         }
         catch (DbUpdateException e)
         {
@@ -24,7 +23,6 @@ public class AuthorsViewModel
                 MessageBox.Show("Возраст слишком маленький.");
             else
                 MessageBox.Show("Имя у вас дурацкое.");
-
         }
     }
 }
